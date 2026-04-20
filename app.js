@@ -1,5 +1,7 @@
-require("./xyz.js");
-const obj =require("./sum.js");
+//require("./xyz.js");
+//const { calculateSum} =require("./sum.js");
+
+import {calculateSum } from "./sum.js";
 
 
 var name = "Namste Node ";
@@ -8,8 +10,8 @@ var a=10;
 
 var b=20;
 
-obj.calculateSum(55,5);
-console.log(obj.x);
+calculateSum(55,5);
+console.log(x);
 
 
 // console.log(name);
