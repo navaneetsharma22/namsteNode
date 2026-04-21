@@ -2,17 +2,18 @@
 
 console.log("This is sum.js file");
 
-var x ="Namste Node "
+var X ="Namste Node "
 
-export function calculateSum(a,b){
+function calculateSum(a,b){
      
     const sum = a + b;
     console.log(sum);
 
 }
-//module.exports = {
-    //x ,calculateSum
 
-//}
+module.exports = {
+    X ,calculateSum
+
+}
 
   
