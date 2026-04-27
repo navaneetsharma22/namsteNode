@@ -2,7 +2,18 @@ require("./xyz.js");
 //const { calculateSum} =require("./sum.js");
 
 //import { X ,calculateSum } from "./sum.js";
-const {X, calculateSum} = require("./sum");
+//const {X, calculateSum} = require("./caculate/sum.js");
+
+//const calculateMultiply = require("./caculate/multiply.js");
+
+//import using require function multipal function at ones 
+const {calculateSum, calculateMultiply} = require("./caculate/index.js");
+
+//importing Json File 
+const data = require("./data.json");
+
+console.log(data);
+
 
 var name = "Namste Node ";
 
@@ -11,7 +22,9 @@ var a=10;
 var b=20;
 
 calculateSum(55,5);
-console.log(X);
+calculateMultiply(a,b);
+
+//console.log(X);
 
 
 // console.log(name);

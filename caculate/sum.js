@@ -11,9 +11,11 @@ function calculateSum(a,b){
 
 }
 
-module.exports = {
-    X ,calculateSum
+// module.exports = {
+//     X ,calculateSum
 
-}
+// }
 
-  
+//individualy export function and value 
+module .exports.X = X;
+module.exports.calculateSum = calculateSum;
