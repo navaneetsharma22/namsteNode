@@ -17,9 +17,9 @@ console.log(data);
 
 var name = "Namste Node ";
 
-var a=10;
+var a=50;
 
-var b=20;
+var b=800;
 
 calculateSum(55,5);
 calculateMultiply(a,b);
