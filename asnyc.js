@@ -16,7 +16,9 @@ setTimeout(() => {
     console.log("setTimeout called after 8 Sec");
 
 },5000);
-
+//Synchronaus 
+//fs.readFile("./file.txt","utf8");
+                                                        0
 //file read 
 fs.readFile("./file.txt","utf-8",(err,data)=>{
     console.log("FileData : ",data);
