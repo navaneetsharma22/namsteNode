@@ -13,9 +13,15 @@ var b = 45828899;
 crypto.pbkdf2Sync("password", "salt",5000000, 50, "sha512");
 console.log(" First key is generated ");
 
+setTimeout(() => {
+    console.log("This is a message from setTimeout function");
+}, 60);
+//it will be only call be called up when once main thred is empty;
+
+
 
 //Asynchronous version of pbkdf2
-crypto.pbkdf2("password", "salt",5000000 , 50, "sha512", (err,key) =>{
+crypto.pbkdf2("password", "salt",500000, 50, "sha512", (err,key) =>{
     console.log("key is generated ");
 
 });
