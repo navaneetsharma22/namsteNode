@@ -4,7 +4,7 @@ const url = "mongodb+srv://ksharma112288_db_user:aSyJS0uQeFAwthZH@database.o67zr
 
 const client = new MongoClient(url);
 
-const dbName = "NamsteNode";
+const dbName = "sample_mflix";
 
 async function main () {
 
@@ -13,15 +13,25 @@ async function main () {
     const db = client.db(dbName);
 
     const collection = db.collection("users");
+  const data = {
+      name: "Karan",
+      email: "karan@gmail.com",
+      department: "IT"
+   }
+
+  const insertResult = await collection.insertMany([data]);
+  console.log('insertResult: ', insertResult);
+    // READ Data from the collection
+    const findResult = await collection.find({}).toArray();
+    console.log('findResult: ', findResult);
 
 
     return "done.";
 
 
-}.close
-
+}
+ 
 main() 
     .then(console.log)
     .catch(console.error)
     .finally(() => client.close());
-    
