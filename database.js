@@ -31,7 +31,8 @@ async function main () {
 
     //Filtering data
 
-    const result = await collection.find({department: "IT"}).toArray();
+    // const result = await collection.find({department: "IT"}).toArray();
+    const result = await collection.find({department: "IT"}).count();
     console.log("result: ", result);
 
 
