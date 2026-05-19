@@ -22,12 +22,17 @@ async function main () {
 //   const insertResult = await collection.insertMany([data]);
 //   console.log('insertResult: ', insertResult);
     // READ Data from the collection
-    const findResult = await collection.find({}).toArray();
-    console.log('findResult: ', findResult);
+    // const findResult = await collection.find({}).toArray();
+    // console.log('findResult: ', findResult);
 
-    const countResult = await collection.countDocuments({});
-    console.log("countResult: ", countResult);
+    // const countResult = await collection.countDocuments({});
+    // console.log("countResult: ", countResult);
     
+
+    //Filtering data
+
+    const result = await collection.find({department: "IT"}).toArray();
+    console.log("result: ", result);
 
 
     return "done.";
@@ -39,3 +44,4 @@ main()
     .then(console.log)
     .catch(console.error)
     .finally(() => client.close());
+
